@@ -91,7 +91,7 @@ Fixed, variable, and marginal costs, and how they drive production and pricing d
 **After Class**
 - Recording of Lecture (not downloaded)
 - Supplemental video on pricing (Panopto, external link, not downloaded)
-- Class 3 slides (not posted as a separate file)
+- [Class 3/EMBA_Lecture_3.pdf](Class%203/EMBA_Lecture_3.pdf) — Class 3 Slides
 - **Required for the first class of Block 2** — the "Brand X" pricing problem: [Class 3/Brand_X.pdf](Class%203/Brand_X.pdf) + [Class 3/Brand_X_Data.xls](Class%203/Brand_X_Data.xls). Best done in teams; expect ~4–5 hours.
   1. Using the data, can you pass judgement on the pricing strategy of the Brand X manufacturer?
   2. What pricing strategy would you recommend given the data?

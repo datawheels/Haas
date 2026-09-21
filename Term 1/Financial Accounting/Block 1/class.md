@@ -32,7 +32,7 @@ During Block 1, we will:
 
 **During Class**
 - Slides: [Class 2/Balance Sheet.pptx](Class%202/Balance%20Sheet.pptx), [Class 2/Income Statement.pptx](Class%202/Income%20Statement.pptx)
-- Sudoku challenge: [Class 2/Sudoku challenge.docx](Class%202/Sudoku%20challenge.docx) (text) + [Class 2/Sudoku challenge.xlsx](Class%202/Sudoku%20challenge.xlsx) (template)
+- Sudoku challenge: [Class 2/Sudoku challenge.docx](Class%202/Sudoku%20challenge.docx) (text) + [Class 2/Sudoku challenge.xlsx](Class%202/Sudoku%20challenge.xlsx) (template) + [Class 2/Sudoku challenge completed.xlsx](Class%202/Sudoku%20challenge%20completed.xlsx) (answers)
 
 **After Class**
 - **Homework assignment 1 (required)** — "Homework 1 (topics from Block 1)" (Canvas assignment, not a file)
