@@ -1,2 +1,4 @@
 .DS_Store
 Term Zero/
+.env
+.canvas_token

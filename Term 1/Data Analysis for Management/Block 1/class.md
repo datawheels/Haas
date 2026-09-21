@@ -39,11 +39,12 @@
 - Lecture slides: [Class 2/Chapter-14.pdf](Class%202/Chapter-14.pdf) (Chapter 14 solutions not posted separately)
 - **In-Class Team Assignment: Airline Pricing** — [Class 2/Team Assignment 1 - One Population Many Samples.pdf](Class%202/Team%20Assignment%201%20-%20One%20Population%20Many%20Samples.pdf), data in [Class 2/AirlinePrices/](Class%202/AirlinePrices/)
   - Our worked answers: [Class 2/Team Assignment 1 - Answers.md](Class%202/Team%20Assignment%201%20-%20Answers.md)
+  - Official solutions: [Class 2/Team Assignment 1 - One Population Many Samples - Solutions.pdf](Class%202/Team%20Assignment%201%20-%20One%20Population%20Many%20Samples%20-%20Solutions.pdf)
 - [Class 2/Z and t Tables.pdf](Class%202/Z%20and%20t%20Tables.pdf)
 
 **After Class**
 - Class 2 Lecture Recording (external link, not downloaded)
-- In-Class Team Assignment Solutions (not posted as a file yet)
+- In-Class Team Assignment Solutions: [Class 2/Team Assignment 1 - One Population Many Samples - Solutions.pdf](Class%202/Team%20Assignment%201%20-%20One%20Population%20Many%20Samples%20-%20Solutions.pdf)
 - Samples with Selection: Mitigation Methods
   - Survey Weights — [Class 2/Block1 - SurveyWeightingExample.pdf](Class%202/Block1%20-%20SurveyWeightingExample.pdf)
   - Worst Case Bounds — [Class 2/Block1 - WorstCaseBounds.pdf](Class%202/Block1%20-%20WorstCaseBounds.pdf)
@@ -63,11 +64,13 @@
 
 **During Class**
 - Slides: [Class 3/Chapter-15.pdf](Class%203/Chapter-15.pdf) (solutions version not posted separately)
-- **In-Class Team Assignment: CPS** — [Class 3/Team Assignment 2 - Unemployment Rate.docx](Class%203/Team%20Assignment%202%20-%20Unemployment%20Rate.docx), data: [Class 3/CPS.xlsx](Class%203/CPS.xlsx) (solutions not posted yet)
+- **In-Class Team Assignment: CPS** — [Class 3/Team Assignment 2 - Unemployment Rate.docx](Class%203/Team%20Assignment%202%20-%20Unemployment%20Rate.docx), data: [Class 3/CPS.xlsx](Class%203/CPS.xlsx)
+  - Solutions: [Class 3/Team Assignment 2 - Unemployment Rate - Solutions.pdf](Class%203/Team%20Assignment%202%20-%20Unemployment%20Rate%20-%20Solutions.pdf)
 
 **After Class**
 - Lecture Recording (not downloaded)
 - *Tobacco Firms Sue EPA on Cancer Ruling*, Washington Post (mentioned, no file link on page)
+- More Practice on Confidence Intervals: Tech Buses — [Class 3/Block1 - Chapter 15 Check As You Go-CI.docx](Class%203/Block1%20-%20Chapter%2015%20Check%20As%20You%20Go-CI.docx)
 - [Class 3/Chapter 15 - Why Were Polls So Wrong in the Wisconsin Governor's Race - NYT.pdf](Class%203/Chapter%2015%20-Why%20Were%20Polls%20So%20Wrong%20in%20the%20Wisconsin%20Governor%3Fs%20Race_%20-%20The%20New%20York%20Times.pdf)
   - Margin of error understates uncertainty with non-response
 - Total Margin of Error (wonky, worst-case-bounds follow-up)
@@ -77,5 +80,5 @@
 ---
 
 ## TA Session
-- Slides — Block 1 Discussion Section (not posted as a file)
-- Exercise on Control Limits — Discussion Section (not posted as a file)
+- Slides — [TA Session/Section_1_F26_toupload.pdf](TA%20Session/Section_1_F26_toupload.pdf) — Block 1 Discussion Section
+- Exercise on Control Limits — [TA Session/Section_1_exercise_ControlLimit.pdf](TA%20Session/Section_1_exercise_ControlLimit.pdf) — Discussion Section
