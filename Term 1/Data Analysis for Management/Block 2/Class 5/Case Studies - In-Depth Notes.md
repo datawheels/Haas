@@ -1,6 +1,6 @@
 # Class 5 Case Study — In-Depth Notes (Chapter 17: Comparisons & Experimental Design)
 
-Source: `Block 2 - Hawthorne Case.pdf` (Davis, Gertler, Thompson, Rodriguez — Berkeley Haas). No chapter slides are posted yet for Class 5 (Stine & Foster Ch. 17.1–17.2 is the assigned reading instead), so this case *is* the primary in-class material — these notes work through it on its own, with an eye toward the two-sample comparison / hypothesis-testing machinery Chapter 17 introduces.
+Source: `Block 2 - Hawthorne Case.pdf` (Davis, Gertler, Thompson, Rodriguez — Berkeley Haas). Chapter 17 slides have since been posted (`Chapter-17.pdf`) — see the companion `Theory Notes.md` in this folder for the full lecture walkthrough, including the chapter's own worked version of this case (its §10). These notes work through the case in more depth on its own, with an eye toward the two-sample comparison / experimental-design machinery Chapter 17 introduces, and (below) extend to the in-class AI Consulting Experiment team assignment.
 
 ---
 
@@ -82,8 +82,66 @@ Yes — the raw comparison is statistically significant but not necessarily *cau
 
 ---
 
-## Cross-cutting theme
-A statistically significant, comfortably-above-breakeven effect size is **necessary but not sufficient** for a causal business decision. The t-test and CI in Section 3 answer "is 20.2 units real, or could it be sampling noise?" — and the answer is clearly *real*. But Section 4's design critique answers a different, more important question the statistics alone can't touch: "real effect of *what*, exactly?" A convenience-based, non-randomized rollout can produce a rock-solid statistical result that is nonetheless the wrong causal story (department composition, time trends, or the Hawthorne effect itself) — which is precisely why experimental design (randomization) matters as much as, or more than, the hypothesis-testing mechanics once you have the data in hand.
+---
+
+## 6. Team Assignment 4 — The AI Consulting Experiment (BCG, "jagged frontier" data)
+
+**Source:** `Team Assignment 4 - AI Consulting Experiment.docx` (in-class team assignment) + `bcg_frontier.csv` (758 rows, one per consultant). The docx explains this is a **classroom reconstruction, simulated to match the published results**, of a real 2023 Boston Consulting Group field experiment: 758 BCG consultants randomly assigned to work **with** an AI assistant (`treatment = AI`) or **without** one (`treatment = Control`) on realistic consulting tasks (brainstorming, drafting, analysis, persuasion), plus one planted task designed to sit **outside** the AI's actual capability at the time. This is explicitly Chapter 17 material, not Chapter 16: unlike "yesterday's" pilot-vs-last-year's-benchmark comparison (a one-sample test against a fixed historical number, $166/$170/$166 depending on the exercise), today's design has a **concurrent, randomized control group** — the central idea of this whole chapter. All numbers below were computed directly from `bcg_frontier.csv` (n = 758: 379 AI, 379 Control — a clean 50/50 split).
+
+### 6.1 Did the randomization "work"? (the baseline balance check)
+
+Computed group means/shares and two-sample tests on the four pre-treatment covariates the assignment specifies:
+
+| Covariate | AI mean/share | Control mean/share | Difference | se | t or z | p-value |
+|---|---|---|---|---|---|---|
+| `tenure_years` | 7.44 | 6.95 | 0.48 | 0.234 | t = 2.07 | **0.038** |
+| `skill_baseline` | 60.03 | 59.39 | 0.64 | 0.874 | t = 0.73 | 0.467 |
+| `female` (share) | 0.433 | 0.427 | 0.005 | 0.036 | z = 0.15 | 0.883 |
+| `office` (4 offices: Boston, London, Mumbai, Munich) | within 2–5 pts of each other across all 4 offices (e.g., Boston 28.5% AI vs. 32.5% Control; London 31.1% vs. 26.4%) | | | | | — |
+
+Exactly **one** statistically significant difference at α = 0.05: `tenure_years`, about half a year higher in the AI group (p ≈ 0.038) — this matches the assignment's own stated answer key almost exactly ("about half a year, p ≈ 0.04").
+
+**Is the experiment broken?** No. You ran **four** independent balance checks at α = 0.05. If randomization truly worked (all four null hypotheses of "no difference" are true), the chance of at least one false positive by chance alone is `1 − 0.95⁴ ≈ 18.5%` — not rare at all. This is the *same* mechanism Chapter 17's Theory Notes §7.3 calls out explicitly with 20 outcomes (`1 − 0.95²⁰ = 0.64`): run enough significance tests on things that are truly unrelated to treatment, and some will cross p<0.05 by pure chance. One marginal, half-year tenure gap out of four checks is *exactly* what you'd expect under a working randomization, not evidence it failed — especially since `skill_baseline` (the covariate most directly tied to job performance) and `female` are both comfortably balanced, and the office mix is close across all four locations.
+
+**What could have contaminated yesterday's pilot-vs-benchmark comparison, and why does a control group fix it?** A pilot compared only to last year's $166 benchmark has no way to separate "the pilot program worked" from "anything else changed between last year and now" — e.g., the overall economy, client mix, seasonality, or a general productivity trend unrelated to the pilot. A concurrent, randomized control group fixes this because both groups experience the *same* time period, the *same* macro conditions, and the *same* task pool — by construction (§4 of the Theory Notes), the only systematic difference between the groups is the treatment itself, so whatever else changed this quarter changed equally for both groups and cancels out in the comparison.
+
+### 6.2 Treatment effects on the main consulting tasks
+
+Two-sample t-tests on the three outcomes, computed directly from the CSV (group means match the printed table in the assignment exactly):
+
+| Metric | AI mean | Control mean | Difference | p-value |
+|---|---|---|---|---|
+| Average task quality (1–8) | 5.62 | 4.01 | **+1.61** | < 0.0001 |
+| Tasks completed (of 18) | 13.22 | 11.77 | **+1.45** | < 0.0001 |
+| Minutes per task | 66.8 | 87.6 | **−20.8** | < 0.0001 |
+
+All three are significant at any conventional α. In percentage terms: quality is **+40.3%**, tasks completed **+12.3%**, time per task **−23.7%** — strikingly close to the real published BCG study's headline figures (consultants using GPT-4 finished "12.2% more tasks, 25.1% more quickly, 40% higher quality" per the HBR/*One Useful Thing* "Centaurs and Cyborgs on the Jagged Frontier" article cited in this class's `class.md` reading list), confirming this simulated dataset was built to reproduce that real result closely.
+
+**Why "caused" is now a defensible word.** Chapter 16's pilot-vs-benchmark exercise never licensed causal language — a pilot beating a fixed historical number could reflect dozens of confounds (§6.1). Here, AI-vs-Control assignment was **randomized**, so — per Chapter 17's Theory Notes §4 — the only systematic average difference between the two groups is the treatment itself; any surviving gap in outcomes can be attributed to the AI, subject only to normal sampling noise (which the p-values already account for).
+
+**The CIO's memo — "AI causes a 40% quality improvement... roll it out for all consulting work immediately."** The experiment *does* license the first clause: the ~40% average quality gain is a defensible, randomization-backed causal estimate, for the mix of tasks actually tested (brainstorming, drafting, analysis, persuasion). It does **not** license "for all consulting work" or "immediately" — those words generalize beyond what was tested, in two ways: (1) external validity — does a 40% gain at BCG, on these four task types, generalize to other firms, other task types, or tasks that look superficially similar but aren't? (2) as §6.3 shows, the experiment's *own* data already contains a task type where the sign of the effect **flips** — "all consulting work" is contradicted by the very dataset the memo is citing.
+
+### 6.3 Stepping outside the frontier
+
+The planted task — superficially a standard spreadsheet analysis, but requiring the analyst to combine the spreadsheet with details buried in separate interview notes — was designed to sit outside the AI's capability at the time; a confident AI reading of the spreadsheet alone gave the wrong answer. Comparing `outside_correct` between groups:
+
+```
+AI:      246/379 correct = 64.9%
+Control: 318/379 correct = 83.9%
+Difference = −19.0 percentage points, p < 0.0001
+```
+
+**One sentence for the managing partner:** *"On the planted task that required synthesizing information the AI could not see in the spreadsheet alone, consultants using AI assistance were right significantly less often than those working without it (65% vs. 84% correct) — the same tool that raised quality by 40% on everyday tasks measurably hurt accuracy on a task outside its competence, and consultants could not tell which kind of task they were on."*
+
+**Reconciling "the AI helps" and "the AI hurts" from the same experiment:** a randomized experiment estimates an **average treatment effect — for the population and task mix actually randomized.** It does not estimate one universal effect of "using AI." The AI's effect was strongly positive, averaged over ordinary brainstorming/drafting/analysis/persuasion tasks, and strongly negative, averaged over the one outside-frontier task — both are real, internally valid causal estimates of the *same* intervention, just conditioned on different task types. Pooling everything into one number (as the CIO's memo implicitly does) would average these two effects together and obscure exactly the heterogeneity that matters most for the rollout decision — directly analogous to how Chapter 17's Credit Indemnity experiment (Theory Notes §9) found that different letter features moved demand differently, and how the ITT/LATE distinction (Theory Notes §12) exists precisely because one pooled average can hide very different effects on different subgroups.
+
+**Recommendation to the firm:** neither "give AI to everyone" nor "block it" — both ignore that consultants could not distinguish in-frontier from out-of-frontier tasks in real time. The data instead supports a **task-type-contingent rollout**: encourage/incentivize AI use for the task categories actually tested and shown to help (brainstorming, drafting, routine analysis, persuasion drafting), while building a verification or "second opinion" step for tasks that resemble the planted outside-frontier case — i.e., anything requiring synthesis of information outside what's visible in a single input (here, interview notes the spreadsheet didn't contain). The open research/management question the memo skips entirely: how do you reliably flag, in real time, which side of the frontier a given task is on, if the consultants themselves couldn't tell?
+
+---
+
+## Cross-cutting themes
+1. A statistically significant, comfortably-above-breakeven effect size is **necessary but not sufficient** for a causal business decision. The t-test and CI in Section 3 answer "is 20.2 units real, or could it be sampling noise?" — and the answer is clearly *real*. But Section 4's design critique answers a different, more important question the statistics alone can't touch: "real effect of *what*, exactly?" A convenience-based, non-randomized rollout can produce a rock-solid statistical result that is nonetheless the wrong causal story (department composition, time trends, or the Hawthorne effect itself) — which is precisely why experimental design (randomization) matters as much as, or more than, the hypothesis-testing mechanics once you have the data in hand.
+2. **A single average treatment effect can hide a sign flip.** The Hawthorne case warns that a real effect can be mis-attributed to the wrong cause (department composition, not lighting); the AI Consulting Experiment (Section 6) shows the complementary danger even inside a *perfectly randomized* design — the same intervention can have a strongly positive effect on one task type and a strongly negative effect on another, and a single pooled "AI improves quality by 40%" headline, however statistically solid, licenses a much narrower rollout decision than a memo-writer might assume.
 
 ## Gulsher questions (along with clarification)
 
