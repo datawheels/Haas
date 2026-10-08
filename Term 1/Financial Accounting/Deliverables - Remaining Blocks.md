@@ -1,6 +1,6 @@
 # Financial Accounting (XMBA 202) — Remaining Deliverables
 
-As of 2026-10-06. Source: `Block 1/XMBA202 - Financial Accounting - Syllabus - Fall 2026 - Dinova.pdf` + live Canvas (course 1554935). Blocks 1–2 are complete; this covers Block 3–4.
+As of 2026-10-09. Source: `Block 1/XMBA202 - Financial Accounting - Syllabus - Fall 2026 - Dinova.pdf` + live Canvas (course 1554935). Lists every deliverable still open as of this date, regardless of which block's class it was taught in — a block's classes finishing doesn't mean its quiz/homework deadline has passed, since those land at the start of the *next* block.
 
 ## Grading (higher of two options — short quizzes can only help, never hurt)
 | Component | Option A | Option B |
@@ -25,6 +25,8 @@ As of 2026-10-06. Source: `Block 1/XMBA202 - Financial Accounting - Syllabus - F
 
 | Deliverable | Due | Format | Notes |
 |---|---|---|---|
+| **Short Quiz 2** (Block 2 topics) | **Wed 10/21, 11:59pm** | Take-home, 10–15 min, open-book/open-notes, on Canvas | Still open as of 10/9 — Block 2's classes already happened (10/1–10/3) but this deadline is separate and hasn't passed |
+| **Homework 2** (Block 2 topics) | **Wed 10/21, 11:59pm** | Individual, satisfactory/unsatisfactory grading (`Block 2/XMBA 202 - Homework 2.docx`) | Same deadline as Short Quiz 2 — both are easy to miss since they land after Block 2's last class |
 | Team presentation topic selection | "By end of Block 3" (~10/24) | Communicated to instructor + logged in the shared team/topics file | Pick an accounting-related current-events topic (revenue recognition, fraud, accounting-rule changes, etc.) |
 | **Short Quiz 3** (Block 3 topics) | **End of day Wed 11/11** | Take-home, 10–15 min, open-book/open-notes, on Canvas | Can be taken any time before the deadline; no make-ups |
 | **Homework 3** (Block 3 topics) | **End of day Wed 11/11** | Individual, satisfactory/unsatisfactory grading | Word/Excel or scanned handwriting; email Vivek if more time is needed |
