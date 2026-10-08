@@ -157,6 +157,20 @@ rsync -av "/Users/gulsher/Documents/Projects/Haas/Term 1/" \
 
 **Never add `--delete`** — the Drive-side copy may hold things that were put there directly (outside this repo) and aren't tracked locally; a mirror sync should only ever add/update, never remove. Google Drive for Desktop picks up the change and syncs it up automatically once the local copy is written — no further action needed.
 
+**After every sync, also regenerate a PDF rendering of each course's Deliverables Tracker, directly into its Drive folder.** Google Drive's preview for `.md` files is plain text — no tables, no bold, no headers — which is unusable for a file the whole class reads. A PDF renders perfectly in Drive's native preview. `.md` stays the source of truth in git; the PDF is a Drive-only presentation artifact, regenerated fresh each sync, never committed to git (it's derived, and committing a binary that changes on every text edit just bloats history).
+
+```bash
+SCR="<a scratch dir, e.g. the session scratchpad>"
+python3 -m venv "$SCR/venv"                      # fresh each session; cheap, ~1s
+"$SCR/venv/bin/pip" install markdown              # system Python is externally-managed (PEP 668) on this Mac, hence the venv
+for course in "Data Analysis for Management" "Managerial Economics" "Financial Accounting"; do
+  "$SCR/venv/bin/python" .claude/skills/haas-course-sync/scripts/md_to_pdf.py \
+    "Term 1/$course/Deliverables Tracker.md" \
+    "/Users/gulsher/Library/CloudStorage/GoogleDrive-gulsher@berkeley.edu/My Drive/Haas/Term 1/$course/Deliverables Tracker.pdf"
+done
+```
+The script (`scripts/md_to_pdf.py`, bundled with this skill) converts Markdown → styled HTML → PDF via headless Chrome (`/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --headless --print-to-pdf=...`) — no paid service, no network call, uses what's already on this Mac. It cleans up its own intermediate HTML file automatically. If Chrome's path ever changes (reinstall, different machine), update the path at the top of the script.
+
 If this folder ever stops existing at that path (e.g. the user resets their Drive sync), locate it fresh: `ls ~/Library/CloudStorage/` will show the mounted account folder name, which may differ from `GoogleDrive-gulsher@berkeley.edu` if the account changes.
 
 **A Drive *folder link/URL* the user pastes (e.g. `drive.google.com/drive/folders/...`) is a different thing** from this sync target — it points at a specific Drive item by ID, which may or may not be anything under "My Drive" or locally synced. Don't assume it's reachable via the rsync path above. If asked to open/read such a link: a plain `WebFetch` will just hit a Google login wall (it's not public), so instead resolve the folder ID locally against Drive for Desktop's own sync database before concluding it's inaccessible:
