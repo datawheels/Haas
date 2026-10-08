@@ -1,11 +1,11 @@
 ---
 name: haas-course-sync
-description: Use this skill whenever the user is working in the Haas EMBA course-notes repo and asks to (a) check Canvas/bCourses for newly posted class materials, (b) write or catch up "Theory Notes" and "Case Studies - In-Depth Notes" for classes that are missing them, (c) push the repo to git, or (d) sync the repo to Google Drive. Trigger on phrases like "check canvas", "anything new on bcourses", "did new stuff get posted", "write notes for class X", "catch up the notes", "push to git", "sync to drive", or "push to git and drive" — even if the user doesn't name all four steps explicitly, since these are usually run together or in sequence. Also use this skill to figure out course IDs, the Canvas API token location, or which classes still need notes.
+description: Use this skill whenever the user is working in the Haas EMBA course-notes repo and asks to (a) check Canvas/bCourses for newly posted class materials, (b) write or catch up "Theory Notes" and "Case Studies - In-Depth Notes" for classes that are missing them, (c) check or update a course's "Deliverables Tracker" (what's due, quizzes, homework, exams), (d) push the repo to git, or (e) sync the repo to Google Drive. Trigger on phrases like "check canvas", "anything new on bcourses", "did new stuff get posted", "write notes for class X", "catch up the notes", "what's due", "any homework/assignments/quizzes", "update the deliverables", "push to git", "sync to drive", or "push to git and drive" — even if the user doesn't name all steps explicitly, since these are usually run together or in sequence. Also use this skill to figure out course IDs, the Canvas API token location, which classes still need notes, or to convert a Canvas UTC timestamp to the correct local deadline. **This tracker is shared with the whole class — a wrong date is worse than no date, so when in doubt, under-claim confidence rather than over-claim it.**
 ---
 
 # Haas course-notes sync
 
-This repo (`/Users/gulsher/Documents/Projects/Haas`) is the user's personal archive of EMBA course materials, organized `Term 1/<Course>/Block N/Class N/`. This skill captures a four-part workflow that's been run repeatedly against it: pull new files down from Canvas, write study notes for classes that don't have them yet, commit/push to GitHub, and mirror the folder into Google Drive. Each part is independent — run whichever one(s) the user actually asked for, not all four by default.
+This repo (`/Users/gulsher/Documents/Projects/Haas`) is the user's personal archive of EMBA course materials, organized `Term 1/<Course>/Block N/Class N/`, now also shared with the rest of the cohort via the Deliverables Trackers. This skill captures a five-part workflow that's been run repeatedly against it: pull new files down from Canvas, write study notes for classes that don't have them yet, keep each course's Deliverables Tracker accurate, commit/push to GitHub, and mirror the folder into Google Drive. Each part is independent — run whichever one(s) the user actually asked for, not all five by default.
 
 ## 0. Shared context
 
@@ -19,6 +19,28 @@ This repo (`/Users/gulsher/Documents/Projects/Haas`) is the user's personal arch
 | Financial Accounting | 1554935 |
 
 **Why these specific IDs and not a generic "find my courses" step each time**: resolving them once and hardcoding saves an API round-trip every run; just re-verify with the endpoint above if a 404 suggests the term rolled over.
+
+**⚠️ Canvas dates are UTC — always convert to Pacific before writing or saying a date out loud.** This is the single costliest mistake made while building this skill: a Canvas `due_at`/`lock_at` of `2026-10-22T06:59:59Z` is **Oct 21, 11:59:59 PM Pacific**, not Oct 22 — naively quoting the UTC date shifts every deadline a day late and has caused real deliverables to be reported as "due 10/22" when they were actually due, and missed, the night before. Pacific Daylight Time (UTC−7) runs until DST ends (first Sunday of November, 2am local); Pacific Standard Time (UTC−8) after that. Use this conversion for every single date before it goes in a file or a chat message — never show or compute with the raw UTC string:
+```python
+import datetime
+def pacific(utc_str, dst_end=datetime.datetime(2026,11,1,9,0,0)):
+    if not utc_str: return None
+    utc = datetime.datetime.strptime(utc_str, '%Y-%m-%dT%H:%M:%SZ')
+    offset = 7 if utc < dst_end else 8  # PDT before DST ends, PST after
+    return utc - datetime.timedelta(hours=offset)
+```
+(`dst_end` is the UTC instant 2am Pacific first-Sunday-of-November falls at; recompute it if this skill is still in use past 2026.)
+
+**⚠️ "That block's classes already happened" does not mean "that block's deliverables are done."** Quizzes and homework are frequently due at the *start of the next* block, not right after the block that taught the material. E.g. Financial Accounting's "Short Quiz 2 / Homework 2 (Block 2 topics)" are due Oct 21 even though Block 2's last class was Oct 3 — nearly three weeks later. This caused real misses in practice (see §3). **Never decide something is "done" by checking whether its block's classes are in the past — always check the actual deadline.** When auditing what's open, pull every assignment's `due_at`/`lock_at`, convert to Pacific with the function above, and compare against *today*, not against which block it's nominally associated with:
+```python
+# after loading assignments for a course into `data` and computing `now` (today, Pacific, as a naive datetime):
+for a in data:
+    deadline_utc = a.get('due_at') or a.get('lock_at')
+    if deadline_utc:
+        dt = datetime.datetime.strptime(deadline_utc, '%Y-%m-%dT%H:%M:%SZ')
+        if dt > now + datetime.timedelta(hours=8):  # still in the future even after Pacific conversion
+            print('STILL OPEN:', a['name'])
+```
 
 ---
 
@@ -85,11 +107,35 @@ Keep that placeholder — it's where the user logs their own follow-up questions
 
 ---
 
-## 3. Commit and push to git
+## 3. Maintain each course's Deliverables Tracker
+
+Each course has a `Term 1/<Course>/Deliverables Tracker.md` — a running "what's due, when, and how sure are we" file. **This is shared with the whole class**, not just personal notes, so it needs a higher bar for accuracy and clarity than the per-class notes do: every date must actually be checked (never estimated and presented as fact), and the file needs to be legible to someone with zero context.
+
+**Structure every tracker the same way** (match the existing files for the exact format, this is the condensed version):
+1. A `**Last verified against live Canvas:** <date>` line right under the title, plus a sources line — so a reader can tell how fresh it is at a glance.
+2. A short "How to read this file" callout covering (a) the UTC→Pacific conversion note above, so readers don't redo the mistake themselves, and (b) the "block ended ≠ deadline passed" trap, named explicitly.
+3. **A single table titled "🔴 What's actually still open" right at the top** — every deliverable with a future deadline, sorted chronologically, with a "Confirmed?" column (✅ Confirmed (Canvas)/(syllabus), or a plain statement that it's an estimate/pattern-based guess). This is the one thing a reader actually needs; don't bury it under grading tables or schedules.
+4. Grading weights, remaining class schedule, final exam specifics — reference material, after the open-items table.
+5. A short "✅ Already completed" table for things with passed deadlines — enough for someone to confirm they didn't miss something, without cluttering the top.
+6. A "❓ Watch list" for things mentioned by the syllabus but not yet posted to Canvas (e.g. a future problem set) — explicitly flagged as not-yet-real, not guessed at.
+
+**Building/updating one — the actual process:**
+1. Pull every assignment for the course fresh (`GET /courses/{cid}/assignments?per_page=100`) — don't trust a previous pass's dates without re-checking, Canvas changes.
+2. Convert every `due_at`/`lock_at` to Pacific with the function in §0, and classify each as still-open or already-past by comparing to *today*, not by which block it's nominally tied to (see the §0 warning — this is exactly the mistake that caused real entries to go missing twice in practice: Financial Accounting's Quiz 2/Homework 2 and Managerial Economics' Problem Set 2 were both initially left out because their associated block's classes had already happened, even though their actual deadlines (both ~3 weeks later) hadn't).
+3. Also check course announcements (`GET /courses/{cid}/discussion_topics?only_announcements=true`) — instructors sometimes post real content (e.g. a between-block team assignment's files) *before* creating the formal graded "Assignment" object, so the assignments endpoint alone can miss it. An announcement can also tell you a deadline genuinely isn't set yet ("more details coming") — in that case, say so plainly rather than inventing or estimating a date, even a soft one; a wrong guessed date is worse than an honest "not yet known."
+4. Cross-reference the syllabus PDF for grading weights, final exam format/date, and the full remaining class schedule — Canvas's assignment list alone won't have these.
+5. If the user supplies files directly (e.g. they downloaded something from Canvas themselves before you got to it), verify them against the live Canvas source before trusting them — download the official version and diff byte sizes/content rather than assuming a filename match is enough.
+
+**When you rename or substantially rewrite one of these files**: stage both the old and new paths in the same `git add` so git records it as a rename rather than a delete+add (see §4's rename note — same principle). And since Google Drive sync never deletes (§5), explicitly move the stale old-named file out of the Drive folder after syncing the new one — `mv <file> ~/.Trash/` (reversible), not `rm -rf` (the auto-mode safety classifier blocks irreversible deletes outright; don't fight it, just use the reversible Trash move instead). Leaving a stale duplicate in a shared Drive folder is exactly the kind of confusing mess this tracker exists to prevent.
+
+---
+
+## 4. Commit and push to git
 
 Standard flow, with two things worth being deliberate about:
 - **Stage files by name**, not `git add -A` — review `git status` first, since the working tree may contain the user's own in-progress homework or drafts that showed up between sessions (not created by this skill). Those are fine to include in the same commit (they're legitimate repo content, not secrets) — skim them for anything sensitive first — but exclude obvious duplicates (e.g. a zip someone extracted locally that duplicates an already-tracked folder) rather than committing bloat.
 - **Confirm before pushing** — `origin` is a real shared GitHub remote (`github.com/datawheels/Haas`), so treat `git push` as the kind of action to check in on before running, even though `git commit` locally doesn't need that. Once the user has said "push" in the current conversation, later pushes in the same session don't need re-confirming — but a session's first push does.
+- **If a file or folder got renamed outside git** (e.g. the user or Drive for Desktop renamed something directly on disk between sessions), `git status` will show it as a plain delete — the new path shows up separately as untracked. Stage *both* the old and new paths in the same `git add` call and git will detect it as a rename automatically (shown as `R` in `git status --short`), preserving history correctly instead of recording a confusing mass delete+add. This has come up twice: a `Managerial Economics ` → `Managerial Economics` directory rename (trailing space removed outside git), and renaming the Deliverables Tracker files themselves.
 
 Commit message: short, states what changed and *why* (new Canvas materials arrived / notes backlog filled / etc.), not a file-by-file list. End with:
 ```
@@ -98,7 +144,7 @@ Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
 
 ---
 
-## 4. Sync to Google Drive
+## 5. Sync to Google Drive
 
 There is no authorized Google Drive *connector* in this environment (it needs an interactive OAuth flow this harness can't run) — don't try to use Drive MCP tools here, they'll fail or aren't loaded. Instead, Google Drive for Desktop is installed and already mirroring part of this repo locally, so a plain filesystem copy does the job:
 
