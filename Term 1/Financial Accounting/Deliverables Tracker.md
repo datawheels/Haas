@@ -1,6 +1,6 @@
 # Financial Accounting (XMBA 202) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-09
+**Last verified against live Canvas:** 2026-10-18
 **Sources:** `Block 1/XMBA202 - Financial Accounting - Syllabus - Fall 2026 - Dinova.pdf` (full class schedule, grading, final exam rules) + Canvas course 1554935 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -11,7 +11,7 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-09)
+## 🔴 What's actually still open (as of 2026-10-18)
 
 | Deliverable | Deadline | Counts toward (Option A / B) | Confirmed? |
 |---|---|---|---|
@@ -42,7 +42,7 @@ If skipping or doing poorly on the quizzes would hurt your average, Option B (wh
 |---|---|---|
 | 6 | Thu 10/22 | Liabilities and Shareholders' Equity (Ch. 9–10) |
 | 7 | Sat 10/24 | Cash Flow Statement Introduction (Ch. 12) |
-| 8 | Thu 11/12 | Financial Statement Analysis, Stock Valuation — uses real companies (Apple, Celsius, Coca-Cola, Amazon materials already in `Block 4/Class 9/`) |
+| 8 | Thu 11/12 | Financial Statement Analysis, Stock Valuation — uses real companies (Apple, Celsius, Coca-Cola, Amazon, Boeing materials already in `Block 4/Class 9/`) |
 | 9 | Fri 11/13 | Course wrap-up exercises, final exam review |
 | 10 | Sat 11/14 | **Team presentations** |
 

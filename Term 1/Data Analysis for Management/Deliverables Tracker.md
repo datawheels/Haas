@@ -1,6 +1,6 @@
 # Data Analysis for Management (XMBA 200S) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-09
+**Last verified against live Canvas:** 2026-10-18
 **Sources:** `Block 1/Syllabus XMBA200S Fall 2026 - Walker.pdf` (class schedule, grading weights, final exam rules) + Canvas course 1555300 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -10,12 +10,12 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-09)
+## 🔴 What's actually still open (as of 2026-10-18)
 
 | Deliverable | Deadline | Counts toward | Confirmed? |
 |---|---|---|---|
-| **Between-Block Team Assignment (Block 2→3)** | **Not set yet** | 40% *(Between-Block category, shared across all 3 of them — see note below)* | Content posted; date is not |
-| Knowledge Check — Block 3 | Not yet posted | Not graded | — |
+| **Between-Block Team Assignment (Block 2→3)** — "Team Assignment 2" on Canvas | **Wed Oct 22, 8:00am** | 40% *(Between-Block category, shared across all 3 of them — see note below)* | ✅ Canvas — one submission per group |
+| Knowledge Check — Block 3 | Wed Oct 22, 8:00am | Not graded | ✅ Canvas |
 | **Final Exam** | **Fri Nov 13, 1:00–4:00pm** (in class) | 40% | ✅ Canvas + syllabus |
 | Between-Block Team Assignment (Block 3→4) | Not yet posted | 40% *(same category)* | — |
 | Knowledge Check — Block 4 | Not yet posted | Not graded | — |
@@ -36,12 +36,14 @@ Nothing above is a solo, last-minute task — both open Between-Block items are 
 | Knowledge Checks | Not graded — self-assessment only |
 
 ## Remaining class schedule
-| # | Date | Time | Topic | Chapters |
+| # | Date | Time | Topic | Chapters / material |
 |---|---|---|---|---|
-| 7 | Thu 10/22 | 8:30–11:30am | The Simple Regression Model and Multiple Regression | 21, 23 |
-| 8 | Fri 10/23 | 8:30–11:30am | Building Regression Models and Machine Learning | 24 |
-| 9 | Thu 11/12 | 1:00–4:00pm | Categorical Variables, Experimental Design, Wrap-up | 25 |
+| 7 | Thu 10/22 | 8:30–11:30am | The Simple Regression Model and Multiple Regression | Ch. 21, 23 — Wine Case (`Block 3/Wine Case.pdf`), read in advance |
+| 8 | Fri 10/23 | 8:30–11:30am | Building Regression Models and Machine Learning | Ch. 24 — Wine Case discussion continues; in-class Housing Prices team assignment; Redfin article (`Block 3/Class 8/`) |
+| 9 | Thu 11/12 | 1:00–4:00pm | Categorical Variables, Experimental Design, Wrap-up | Ch. 25 |
 | 10 | Fri 11/13 | 1:00–4:00pm | **Final Exam** | — |
+
+**Lecture slides for Classes 7/8 are not posted yet** (checked live on 10/18 — Chapter 21/23/24 are still placeholder text on the Canvas page, no actual link behind them).
 
 ## Final Exam — what to expect
 | Field | Detail |
@@ -72,9 +74,15 @@ Deadlines passed — for reference only, not action items.
 
 ## 🔴 Between-Block Team Assignment (Block 2→3) — full detail
 
-**Posted:** Oct 5, via Canvas announcement "Between Block Announcement (Block 2→Block 3)." **Deadline: not yet announced** — the instructor's own announcement says *"We will create an 'Assignment' on bCourses... I will post some more specifics on the Block 3 webpage in the coming days."* Don't guess a date; check Canvas for the real "Assignment" entry once it exists. (For reference only: the Block 1→2 assignment was due the night before the next block started, so Thu 10/22 is a *plausible* guide — not a confirmed date.)
+| Field | Detail |
+|---|---|
+| Canvas name | "Team Assignment 2" |
+| Deadline | Wed Oct 22, 8:00am Pacific |
+| Posted | Oct 5, via Canvas announcement "Between Block Announcement (Block 2→Block 3)" |
+| Submission | One zip file per group |
+| Files | `Block 2/Between-Block 2 & 3/` — verified byte-for-byte identical to Canvas's official zip |
 
-Files are in `Block 2/Between-Block 2 & 3/` (verified byte-for-byte identical to Canvas's official zip). Team submission as a single zip, three parts:
+Three parts:
 
 | Part | Title | What it covers |
 |---|---|---|

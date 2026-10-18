@@ -1,6 +1,6 @@
 # Managerial Economics (XMBA 201A) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-09
+**Last verified against live Canvas:** 2026-10-18
 **Sources:** `Block 1/XMBA201A_syllabus_2026.pdf` (full class schedule, grading weights, final exam rules) + Canvas course 1555302 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -10,7 +10,7 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-09)
+## 🔴 What's actually still open (as of 2026-10-18)
 
 | Deliverable | Deadline | Counts toward | Confirmed? |
 |---|---|---|---|
@@ -39,7 +39,10 @@
 | 9 | Thu 11/12 | Sequential Games, Vertical Relationships, Firm Boundaries and Contracting | — |
 | — | **Sat 11/14, 8:30–11:30am** | **Final Exam** — the last class meeting, no separate lecture that day | — |
 
-**Lecture slides for Classes 6/7/8 are not posted yet** (checked live on 10/9 — only the discussion-prep readings/cases above are up).
+**Lecture slides for Classes 6/7/8 are not posted yet** (checked live on 10/18 — only the discussion-prep readings/cases above are up).
+
+## Supplementary (not graded)
+The GSI has posted weekly office-hours practice question sets (with solution notes for two of them) in `GSI Office Hours/` — useful for exam prep, not a deliverable with a deadline: Sep 30, Oct 7, and Oct 14 sessions so far.
 
 ## Final Exam — what to expect
 | Field | Detail |
