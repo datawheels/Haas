@@ -60,7 +60,8 @@ Each course's content lives on one Canvas "page" per block (slug `block-1`, `blo
        s = re.sub(r"[‘’“”'\"?]", '', s)
        return re.sub(r'[^a-z0-9]+', '', s)
    ```
-5. For anything genuinely new (no normalized match locally), figure out which Class folder it belongs to by reading the surrounding text on the block page (the class heading it falls under) or the corresponding `class.md`, then download it there:
+5. For anything genuinely new (no normalized match locally), figure out which Class folder it belongs to. **Don't rely on plain-text proximity alone (a stripped-tags text dump) — check which class heading the file's actual `<a href>` sits under in the raw HTML.** The same assignment/case is often *mentioned* under more than one class (a forward-reference, a "we'll discuss this further" note, a solutions placeholder that isn't linked yet) with only one of those mentions being the real link — e.g. a page once listed "Housing Prices" under both Class 7 ("In Class Team Assignment Part 1: Housing Prices (Handout, Data)" — real hrefs) and Class 8 ("Team Assignment, Housing Prices (Handout, Data, Solutions)" — plain `<li>` text, no `<a>` tags at all). Reading only the de-tagged text made it look ambiguous between the two; checking the raw HTML around the actual file ID showed it unambiguously belonged to Class 7. If a name shows up more than once, grep the raw (untagged) HTML for the specific file ID to see which occurrence actually wraps it in an `<a href>`, then use the nearest class heading *above that occurrence*, not just whichever mention reads most naturally.
+   Use `class.md` as a secondary cross-check, not a substitute for this.
    ```bash
    curl -s -L -H "Authorization: Bearer $CANVAS_TOKEN" \
      "${CANVAS_BASE_URL}courses/<cid>/files/<id>/download?download_frd=1" \

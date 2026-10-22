@@ -38,12 +38,12 @@ Nothing above is a solo, last-minute task — both open Between-Block items are 
 ## Remaining class schedule
 | # | Date | Time | Topic | Chapters / material |
 |---|---|---|---|---|
-| 7 | Thu 10/22 | 8:30–11:30am | The Simple Regression Model and Multiple Regression | Ch. 21, 23 — Wine Case (`Block 3/Wine Case.pdf`), read in advance |
-| 8 | Fri 10/23 | 8:30–11:30am | Building Regression Models and Machine Learning | Ch. 24 — Wine Case discussion continues; in-class Housing Prices team assignment; Redfin article (`Block 3/Class 8/`) |
+| 7 | Thu 10/22 | 8:30–11:30am | The Simple Regression Model and Multiple Regression | Ch. 21, 23 — Wine Case (`Block 3/Wine Case.pdf`), read in advance; in-class "Housing Prices Part 1" team assignment (`Block 3/Class 7/`) |
+| 8 | Fri 10/23 | 8:30–11:30am | Building Regression Models and Machine Learning | Ch. 24 — Wine Case discussion continues; Redfin article (`Block 3/Class 8/`); Canvas also lists a forward-reference to the Class 7 Housing Prices assignment here with a "Solutions" item — not linked yet |
 | 9 | Thu 11/12 | 1:00–4:00pm | Categorical Variables, Experimental Design, Wrap-up | Ch. 25 |
 | 10 | Fri 11/13 | 1:00–4:00pm | **Final Exam** | — |
 
-**Class 7 slides are up** (Chapter 21 + Chapter 23 Part 1, posted 10/22, in `Block 3/Class 7/`). Class 8's Chapter 23 Part 2 / Chapter 24 slides are still not posted. A new in-class team exercise also appeared for Class 8 — "Team Assignment 6 — Home Prices Part 1" (`Block 3/Class 8/`), not yet a graded Canvas "Assignment" entry (no deadline set).
+**Class 7 slides are up** (Chapter 21 + Chapter 23 Part 1, posted 10/22, in `Block 3/Class 7/`). Class 8's Chapter 23 Part 2 / Chapter 24 slides are still not posted. A new in-class team exercise also appeared — "Team Assignment 6 — Home Prices Part 1" — correctly belongs to **Class 7** (confirmed from the actual link in the Canvas page HTML, not just the nearby text) and is in `Block 3/Class 7/`. Not yet a graded Canvas "Assignment" entry (no deadline set). Its solutions will presumably post after Class 8 discusses it further (Canvas already shows an unlinked "Solutions" placeholder under Class 8).
 
 ## Final Exam — what to expect
 | Field | Detail |
