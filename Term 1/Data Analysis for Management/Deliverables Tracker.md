@@ -1,6 +1,6 @@
 # Data Analysis for Management (XMBA 200S) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-18
+**Last verified against live Canvas:** 2026-10-22
 **Sources:** `Block 1/Syllabus XMBA200S Fall 2026 - Walker.pdf` (class schedule, grading weights, final exam rules) + Canvas course 1555300 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -10,7 +10,7 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-18)
+## 🔴 What's actually still open (as of 2026-10-22)
 
 | Deliverable | Deadline | Counts toward | Confirmed? |
 |---|---|---|---|
@@ -43,7 +43,7 @@ Nothing above is a solo, last-minute task — both open Between-Block items are 
 | 9 | Thu 11/12 | 1:00–4:00pm | Categorical Variables, Experimental Design, Wrap-up | Ch. 25 |
 | 10 | Fri 11/13 | 1:00–4:00pm | **Final Exam** | — |
 
-**Lecture slides for Classes 7/8 are not posted yet** (checked live on 10/18 — Chapter 21/23/24 are still placeholder text on the Canvas page, no actual link behind them).
+**Class 7 slides are up** (Chapter 21 + Chapter 23 Part 1, posted 10/22, in `Block 3/Class 7/`). Class 8's Chapter 23 Part 2 / Chapter 24 slides are still not posted. A new in-class team exercise also appeared for Class 8 — "Team Assignment 6 — Home Prices Part 1" (`Block 3/Class 8/`), not yet a graded Canvas "Assignment" entry (no deadline set).
 
 ## Final Exam — what to expect
 | Field | Detail |

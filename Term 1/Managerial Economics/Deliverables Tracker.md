@@ -1,6 +1,6 @@
 # Managerial Economics (XMBA 201A) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-18
+**Last verified against live Canvas:** 2026-10-22
 **Sources:** `Block 1/XMBA201A_syllabus_2026.pdf` (full class schedule, grading weights, final exam rules) + Canvas course 1555302 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -10,12 +10,11 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-18)
+## 🔴 What's actually still open (as of 2026-10-22)
 
 | Deliverable | Deadline | Counts toward | Confirmed? |
 |---|---|---|---|
-| **Problem Set 2** | **Wed Oct 21, 11:59pm** | 30% *(Problem Sets category, shared across all of them — see note below)* | ✅ Canvas |
-| Problem Set 3 | Not yet posted | Same category | — |
+| Problem Set 3 | Not yet posted | 30% *(Problem Sets category, shared across all of them — see note below)* | — |
 | **Final Exam** | **Sat Nov 14, 8:30–11:30am** (in class) | 50% | ✅ Syllabus |
 | Problem Set 4 (if assigned) | Not yet posted — unclear if there even is one | Same category | — |
 
@@ -39,10 +38,10 @@
 | 9 | Thu 11/12 | Sequential Games, Vertical Relationships, Firm Boundaries and Contracting | — |
 | — | **Sat 11/14, 8:30–11:30am** | **Final Exam** — the last class meeting, no separate lecture that day | — |
 
-**Lecture slides for Classes 6/7/8 are not posted yet** (checked live on 10/18 — only the discussion-prep readings/cases above are up).
+**Class 6 slides are up** (EMBA_Lecture_6.pdf, posted 10/22, in `Block 3/Class 6/`). Classes 7/8 slides are still not posted.
 
 ## Supplementary (not graded)
-The GSI has posted weekly office-hours practice question sets (with solution notes for two of them) in `GSI Office Hours/` — useful for exam prep, not a deliverable with a deadline: Sep 30, Oct 7, and Oct 14 sessions so far.
+The GSI has posted weekly office-hours practice question sets (with solution notes for two of them) in `GSI Office Hours/` — useful for exam prep, not a deliverable with a deadline: Sep 30, Oct 7, Oct 14, and Oct 19 sessions so far.
 
 ## Final Exam — what to expect
 | Field | Detail |
@@ -62,20 +61,14 @@ The GSI has posted weekly office-hours practice question sets (with solution not
 | Problem Set 1 | Wed Sep 30, 11:59pm |
 | Block 1 classes (1–3) | Sep 10–12 |
 | Block 2 classes (4–5) | Oct 1–2 |
+| **Problem Set 2** (`Block 2/EMBA_PS2.pdf`) | Wed Oct 21, 11:59pm |
 
 ---
-
-## 🔴 Problem Set 2 — full detail
-| Field | Detail |
-|---|---|
-| Due | Wed Oct 21, 11:59pm Pacific |
-| Format | Individual submission |
-| File | `Block 2/EMBA_PS2.pdf` |
 
 ## ❓ Watch list — not posted yet, but expected
 | Item | Status |
 |---|---|
-| Problem Set 3 | PS1 and PS2 each landed right at the start of the following module, so expect PS3 sometime between Oct 21 and Nov 12, covering Block 3 material. Not posted as of 10/9. |
+| Problem Set 3 | PS1 and PS2 each landed right at the start of the following module, so expect PS3 sometime between now and Nov 12, covering Block 3 material. Not posted as of 10/22. |
 | Problem Set 4 | Syllabus says problem sets are distributed "approximately every module" (4 modules total), but it's unclear whether a 4th one actually lands before the final exam. |
 
 Re-run the Canvas check (`haas-course-sync` skill) periodically to catch Problem Set 3/4 and the Block 3 lecture slides as they're posted.

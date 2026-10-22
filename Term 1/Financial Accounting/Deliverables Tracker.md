@@ -1,6 +1,6 @@
 # Financial Accounting (XMBA 202) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-18
+**Last verified against live Canvas:** 2026-10-22
 **Sources:** `Block 1/XMBA202 - Financial Accounting - Syllabus - Fall 2026 - Dinova.pdf` (full class schedule, grading, final exam rules) + Canvas course 1554935 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -11,12 +11,10 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-18)
+## 🔴 What's actually still open (as of 2026-10-22)
 
 | Deliverable | Deadline | Counts toward (Option A / B) | Confirmed? |
 |---|---|---|---|
-| **Short Quiz 2** (Block 2 topics) | **Wed Oct 21, 11:59pm** | Short quizzes: 10% / 0% | ✅ Canvas + syllabus |
-| **Homework 2** (Block 2 topics) | **Wed Oct 21, 11:59pm** | Homework: 10% / 10% | ✅ Canvas + syllabus |
 | Team presentation — topic selection | "By end of Block 3" (~Oct 24) | Team presentation: 20% / 20% | Syllabus guidance, no hard Canvas deadline |
 | Short Quiz 3 (Block 3 topics) | **Wed Nov 11, 11:59pm** | Short quizzes: 10% / 0% | ✅ Canvas + syllabus |
 | Homework 3 (Block 3 topics) | **Wed Nov 11, 11:59pm** | Homework: 10% / 10% | ✅ Canvas + syllabus |
@@ -65,6 +63,8 @@ If skipping or doing poorly on the quizzes would hurt your average, Option B (wh
 | Homework 1 (Block 1 topics) | Wed Sep 30, 11:59pm |
 | Block 1 classes (1–2) | Sep 11–12 |
 | Block 2 classes (3–5) | Oct 1–3 |
+| **Short Quiz 2** (Block 2 topics) | Wed Oct 21, 11:59pm |
+| **Homework 2** (Block 2 topics) | Wed Oct 21, 11:59pm |
 
 ---
 
