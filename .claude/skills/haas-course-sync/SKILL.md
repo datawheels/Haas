@@ -71,6 +71,8 @@ Each course's content lives on one Canvas "page" per block (slug `block-1`, `blo
 
 **Known false-positive traps**: smart-quote/em-dash mangling (handled by the normalizer above), and zipped re-bundles of already-downloaded content (handled by step 6).
 
+**A file correctly matching an existing local copy is not the end of the story if it's now referenced from a *different* class.** Courses sometimes re-link an older case/file from an earlier block into a later one (e.g. "Brand X" was assigned in Block 1 Class 3, then Canvas linked the same file again from Block 3 Class 6's page for a follow-up discussion). The normalizer will correctly skip it as "not new" — right, don't re-download — but if you then write a Deliverables Tracker note claiming files are "all in `Block N/Class M/`," check that every file in that sentence actually lives there; a re-linked older file won't, unless you copy it in too. When this happens, copy (not move — the original class is still a valid home for it) the file into the new class folder as well, so both contexts are self-contained, and say in the tracker note where it originally came from so the repeat isn't confusing.
+
 ---
 
 ## 2. Write Theory Notes and Case Studies notes

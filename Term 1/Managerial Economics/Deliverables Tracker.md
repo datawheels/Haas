@@ -32,7 +32,7 @@
 ## Remaining class schedule
 | # | Date | Topic | Reading/case material |
 |---|---|---|---|
-| 6 | Thu 10/22 | Competitive Pricing, Market Supply, Competitive Market Dynamics | "Brand X" case; Plywood, New Rochelle rent-control, and used-car-price WSJ articles — all in `Block 3/Class 6/` |
+| 6 | Thu 10/22 | Competitive Pricing, Market Supply, Competitive Market Dynamics | "Brand X" case (originally assigned back in Block 1 Class 3 — now also copied into `Block 3/Class 6/` since Canvas links it here again) + Plywood, New Rochelle rent-control, and used-car-price WSJ articles, also in `Block 3/Class 6/` |
 | 7 | Fri 10/23 | Introduction to Strategic Thinking and Auctions | Airbnb and Tyson bidding-war WSJ articles — in `Block 3/Class 7/` |
 | 8 | Sat 10/24 | Bidding Behavior; Cut-Throat Competition (the Bertrand Trap) | "Federated Industries (A)" case, semiconductor-shares and LA-fires rental-market WSJ articles — in `Block 3/Class 8/` |
 | 9 | Thu 11/12 | Sequential Games, Vertical Relationships, Firm Boundaries and Contracting | — |
