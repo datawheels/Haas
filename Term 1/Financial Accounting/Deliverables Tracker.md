@@ -1,6 +1,6 @@
 # Financial Accounting (XMBA 202) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-22
+**Last verified against live Canvas:** 2026-10-23
 **Sources:** `Block 1/XMBA202 - Financial Accounting - Syllabus - Fall 2026 - Dinova.pdf` (full class schedule, grading, final exam rules) + Canvas course 1554935 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -11,7 +11,7 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-22)
+## 🔴 What's actually still open (as of 2026-10-23)
 
 | Deliverable | Deadline | Counts toward (Option A / B) | Confirmed? |
 |---|---|---|---|

@@ -1,6 +1,6 @@
 # Managerial Economics (XMBA 201A) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-22
+**Last verified against live Canvas:** 2026-10-23
 **Sources:** `Block 1/XMBA201A_syllabus_2026.pdf` (full class schedule, grading weights, final exam rules) + Canvas course 1555302 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -10,7 +10,7 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-22)
+## 🔴 What's actually still open (as of 2026-10-23)
 
 | Deliverable | Deadline | Counts toward | Confirmed? |
 |---|---|---|---|
@@ -41,17 +41,18 @@
 **Class 6 slides are up** (EMBA_Lecture_6.pdf, posted 10/22, in `Block 3/Class 6/`). Classes 7/8 slides are still not posted.
 
 ## Supplementary (not graded)
-The GSI has posted weekly office-hours practice question sets (with solution notes for two of them) in `GSI Office Hours/` — useful for exam prep, not a deliverable with a deadline: Sep 30, Oct 7, Oct 14, and Oct 19 sessions so far.
+The GSI has posted weekly office-hours practice question sets (with solution notes for two of them) in `GSI Office Hours/` — useful for exam prep, not a deliverable with a deadline: Sep 30, Oct 7, Oct 14, and Oct 19 sessions so far. **Schedule note (confirmed 10/19 announcement):** GSI office hours are rescheduled to Mon 5:30–6:30pm during class-block weeks (Oct 19 and Nov 9 specifically called out).
 
 ## Final Exam — what to expect
 | Field | Detail |
 |---|---|
 | Date/Time | Sat Nov 14, 8:30–11:30am, in class |
 | Format | The final class meeting itself — there's no separate lecture that day |
-| Materials allowed | Closed-book |
-| Devices | None — no laptops or phones |
+| Materials allowed | Closed-book, but **one page (two-sided) cheat-sheet is allowed** (confirmed via instructor announcement 10/22) |
+| Devices | None — no laptops or phones; instructor noted you won't need Excel during the exam |
 | Weight | 50% of final grade — the single largest component in the course |
-| Source | Syllabus, confirmed |
+| Prep materials | 7 past exams (2018–2023 finals/midterms) posted 10/22, in `Past Exams/` — instructor recommends working through these plus the problem sets as the best prep |
+| Source | Syllabus + 10/22 announcement |
 
 ---
 

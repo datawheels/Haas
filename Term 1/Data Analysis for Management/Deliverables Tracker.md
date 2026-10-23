@@ -1,6 +1,6 @@
 # Data Analysis for Management (XMBA 200S) — Deliverables Tracker
 
-**Last verified against live Canvas:** 2026-10-22
+**Last verified against live Canvas:** 2026-10-23
 **Sources:** `Block 1/Syllabus XMBA200S Fall 2026 - Walker.pdf` (class schedule, grading weights, final exam rules) + Canvas course 1555300 (assignment due dates, posted materials, announcements)
 
 ### How to read this file
@@ -10,19 +10,19 @@
 
 ---
 
-## 🔴 What's actually still open (as of 2026-10-22)
+## 🔴 What's actually still open (as of 2026-10-23)
 
 | Deliverable | Deadline | Counts toward | Confirmed? |
 |---|---|---|---|
-| **Between-Block Team Assignment (Block 2→3)** — "Team Assignment 2" on Canvas | **Wed Oct 22, 8:00am** | 40% *(Between-Block category, shared across all 3 of them — see note below)* | ✅ Canvas — one submission per group |
-| Knowledge Check — Block 3 | Wed Oct 22, 8:00am | Not graded | ✅ Canvas |
+| **Assignment 6 — Home Prices Part 1** (in-class team exercise, Class 7) | **Sat Oct 24, 11:59pm** | In-Class Team Assignments: 10% | ✅ Canvas — now a graded assignment (10 pts), previously had no deadline set |
+| **Assignment 7 — Home Prices Part 2** (in-class team exercise, Class 8) | **Sat Oct 24, 11:59pm** | In-Class Team Assignments: 10% | ✅ Canvas — newly posted 10/23 (10 pts) |
 | **Final Exam** | **Fri Nov 13, 1:00–4:00pm** (in class) | 40% | ✅ Canvas + syllabus |
-| Between-Block Team Assignment (Block 3→4) | Not yet posted | 40% *(same category)* | — |
+| Between-Block Team Assignment (Block 3→4) | Not yet posted | 40% *(Between-Block category, shared across all 3 of them — see note below)* | — |
 | Knowledge Check — Block 4 | Not yet posted | Not graded | — |
 
 **Note on the 40% Between-Block figure:** the syllabus states "Between-Block Team Assignments: 40%" as one category covering all of them (1→2, 2→3, 3→4) together — it does not say each individual one is worth 40% on its own. Treat that 40% as shared across the set, not per-assignment.
 
-Nothing above is a solo, last-minute task — both open Between-Block items are **team** submissions.
+**Assignments 6 and 7 are a different category from the Between-Block assignments** — they're the in-class "Home Prices" team exercises from Class 7/Class 8 (worth 10 points each, under "In-Class Team Assignments," a separate 10%-weight category from the 40% Between-Block one). Both share the same Sat Oct 24, 11:59pm deadline even though they were introduced on different class days.
 
 ---
 
@@ -39,11 +39,13 @@ Nothing above is a solo, last-minute task — both open Between-Block items are 
 | # | Date | Time | Topic | Chapters / material |
 |---|---|---|---|---|
 | 7 | Thu 10/22 | 8:30–11:30am | The Simple Regression Model and Multiple Regression | Ch. 21, 23 — Wine Case (`Block 3/Wine Case.pdf`), read in advance; in-class "Housing Prices Part 1" team assignment (`Block 3/Class 7/`) |
-| 8 | Fri 10/23 | 8:30–11:30am | Building Regression Models and Machine Learning | Ch. 24 — Wine Case discussion continues; Redfin article (`Block 3/Class 8/`); Canvas also lists a forward-reference to the Class 7 Housing Prices assignment here with a "Solutions" item — not linked yet |
+| 8 | Fri 10/23 | 8:30–11:30am | Building Regression Models and Machine Learning | Ch. 23 Part 2, Ch. 24 — Wine Case discussion continues; Redfin article, "Home Prices Part 2" team assignment (`Block 3/Class 8/`) |
 | 9 | Thu 11/12 | 1:00–4:00pm | Categorical Variables, Experimental Design, Wrap-up | Ch. 25 |
 | 10 | Fri 11/13 | 1:00–4:00pm | **Final Exam** | — |
 
-**Class 7 slides are up** (Chapter 21 + Chapter 23 Part 1, posted 10/22, in `Block 3/Class 7/`). Class 8's Chapter 23 Part 2 / Chapter 24 slides are still not posted. A new in-class team exercise also appeared — "Team Assignment 6 — Home Prices Part 1" — correctly belongs to **Class 7** (confirmed from the actual link in the Canvas page HTML, not just the nearby text) and is in `Block 3/Class 7/`. Not yet a graded Canvas "Assignment" entry (no deadline set). Its solutions will presumably post after Class 8 discusses it further (Canvas already shows an unlinked "Solutions" placeholder under Class 8).
+**Class 7 slides are up** (Chapter 21 + Chapter 23 Part 1, posted 10/22, in `Block 3/Class 7/`). **Class 8's slides are now also up** (Chapter 23 Part 2 + Chapter 24, posted 10/23, in `Block 3/Class 8/`), along with "Team Assignment 7 — Home Prices Part 2" (`Block 3/Class 8/Team Assignment 7 - Home Prices Part 2.docx`) — this turned out to be a genuinely new Part 2 assignment, not the "Solutions" to Class 7's Part 1 that had been expected; both "Team Assignment 6 — Home Prices Part 1" (Class 7) and "Team Assignment 7 — Home Prices Part 2" (Class 8) are now graded Canvas assignments due Sat Oct 24, 11:59pm (see the open-items table above).
+
+**Final-exam prep materials posted 10/13**: a practice final exam and its solutions are in `Final Exam Prep/` (top-level, not block-specific) — open-book/notes but no computer/phone/electronic devices, same format as the real final.
 
 ## Final Exam — what to expect
 | Field | Detail |
@@ -69,6 +71,8 @@ Deadlines passed — for reference only, not action items.
 | Between-Block Team Assignment (Block 1→2, "SentinelQA") | Wed Sep 30 |
 | Knowledge Check — Block 2 | Thu Oct 1 |
 | In-class Assignment 3 (Free Shipping Isn't Free) | Thu Oct 1 |
+| **Between-Block Team Assignment (Block 2→3)** — "Team Assignment 2" | Wed Oct 22, 8:00am |
+| Knowledge Check — Block 3 | Wed Oct 22, 8:00am |
 
 ---
 
@@ -91,6 +95,19 @@ Three parts:
 | 3 | Design Your Own Experiment | No dataset — design an original randomized experiment from scratch (sampling frame, level of randomization, stratification, non-compliance, number of outcomes/tests) |
 
 All three require a team AI-use statement at the end, per the course's AI policy.
+
+---
+
+## 🔴 Home Prices Team Assignments (6 & 7) — full detail
+
+| Field | Detail |
+|---|---|
+| Deadline (both parts) | Sat Oct 24, 11:59pm Pacific |
+| Counts toward | In-Class Team Assignments: 10% (separate from the 40% Between-Block category) |
+| Points | 10 pts each (20 pts combined) |
+| Part 1 files | `Block 3/Class 7/Team Assignment 6 - Home Prices Part 1.docx` + `home_prices.csv` |
+| Part 2 files | `Block 3/Class 8/Team Assignment 7 - Home Prices Part 2.docx` |
+| Submission | Team, one per group (same pattern as other in-class team assignments) |
 
 ---
 
