@@ -38,11 +38,13 @@ If skipping or doing poorly on the quizzes would hurt your average, Option B (wh
 ## Remaining class schedule
 | Class | Date | Topic |
 |---|---|---|
-| 6 | Thu 10/22 | Liabilities and Shareholders' Equity (Ch. 9–10) |
+| 6 | Thu 10/22 | Liabilities and Shareholders' Equity (Ch. 9–10) — in-class Boeing leverage example, `Block 3/Class 6/` |
 | 7 | Sat 10/24 | Cash Flow Statement Introduction (Ch. 12) |
-| 8 | Thu 11/12 | Financial Statement Analysis, Stock Valuation — uses real companies (Apple, Celsius, Coca-Cola, Amazon, Boeing materials already in `Block 4/Class 9/`) |
-| 9 | Fri 11/13 | Course wrap-up exercises, final exam review |
+| 8 | Thu 11/12 | Team review challenges for the final exam (financial statement prep, crossword, scavenger hunt) — content posted right before class, nothing to download yet |
+| 9 | Fri 11/13 | Financial Statement Analysis, Stock Valuation — uses real companies (Apple in `Block 4/Class 9/`; the Amazon/Celsius/Coca-Cola working-capital comparison is actually a separate Class 4 activity, in `Block 2/Class 4/`, not this class — see note below) |
 | 10 | Sat 11/14 | **Team presentations** |
+
+**Correcting a mix-up**: an earlier pass had Class 8 and Class 9's topics backwards, and had filed the Boeing/Amazon/Celsius/Coca-Cola example files under Class 9 by assuming they were all "financial statement analysis" examples. Checking the actual Canvas page text directly showed: Boeing is explicitly introduced with Class 6's Liabilities slides (leverage topic); Amazon/Celsius/Coca-Cola are explicitly from the "Working capital management" team activity attached to Class 4; only Apple is actually Class 9's own content. All four have been moved to their correct folders.
 
 ## Final Exam — what to expect
 | Field | Detail |
